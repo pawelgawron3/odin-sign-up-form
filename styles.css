@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+:root {
+  --box-shadow-color: rgba(0, 0, 0, 0.3);
+}
+
 *,
 *::before,
 *::after {
@@ -22,6 +26,11 @@ body {
   display: flex;
   line-height: 1.5;
   font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -75,8 +84,6 @@ a:visited {
 #right-side {
   width: 60%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 div.top {
@@ -105,12 +112,10 @@ div.text p {
 div.mid {
   width: 100%;
   height: calc(100vh / 3);
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 20px;
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px var(--box-shadow-color);
   padding-left: 50px;
 }
 
@@ -127,15 +132,7 @@ div#form-container {
 
 .form-left,
 .form-right {
-  display: flex;
-  flex-direction: column;
   gap: 20px;
-}
-
-.form-left > div,
-.form-right > div {
-  display: flex;
-  flex-direction: column;
 }
 
 input {
@@ -149,7 +146,7 @@ input {
 input:focus {
   outline: none;
   border: 2px solid rgba(18, 85, 228, 0.7);
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 2px 4px var(--box-shadow-color);
 }
 
 input:invalid {
@@ -172,7 +169,7 @@ label {
   background-color: #596d48;
   color: whitesmoke;
   font-size: 1.2rem;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 3px var(--box-shadow-color);
   padding: 10px 40px;
   border-radius: 10px;
   border: none;
@@ -182,7 +179,7 @@ label {
 
 #btn:hover {
   cursor: pointer;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 6px var(--box-shadow-color);
   color: #596d48;
   background-color: whitesmoke;
 }
